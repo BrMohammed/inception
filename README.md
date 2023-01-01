@@ -5,8 +5,7 @@ services under specific rules.
 
 <img width="697" alt="207206454-724fbb86-7285-4893-b70c-537f37d81d71" src="https://user-images.githubusercontent.com/65908703/210175934-889e9f16-b5c7-473f-bfbc-49a021ba8ba5.png">
 
-**Docker**
-
+**`Docker`**
 - [The Ultimate Docker Course](https://codewithmosh.com/p/the-ultimate-docker-course)
 - [Docker in Practice: The Docker Daemon , By Ian Miell](https://freecontent.manning.com/wp-content/uploads/docker-in-practice-the-docker-daemon.pdf)
 - [Docker compose tutorial for beginners by example](https://www.youtube.com/watch?v=4EqysCR3mjo&ab_channel=takacsmark)
@@ -14,7 +13,6 @@ services under specific rules.
 - [Docker networking is CRAZY ](https://www.youtube.com/watch?v=bKFMS5C4CG0&t=1530s&ab_channel=NetworkChuck)
 
 **`NginX`**
-
 - [How does the Internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
 - [What is the difference between webpage, website, web server, and search engine?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
 - [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)

@@ -18,4 +18,5 @@ services under specific rules.
 - [What is Nginx? Understanding the basics of Nginx in 2021 !](https://devopscurry.com/what-is-nginx-understanding-the-basics-of-nginx-in-2021/)
 - [What is a Proxy Server and How Does it Work?](https://www.varonis.com/blog/what-is-a-proxy-server)
 - [What Is a Reverse Proxy Server?](https://www.nginx.com/resources/glossary/reverse-proxy-server/)
-
+- [hat Is TLS? Understanding Transport Layer Security and How It Works](https://www.hostinger.com/tutorials/what-is-tls#What_Is_TLS)
+- [Compare TLS 1.3 and TLS 1.2](https://www.venafi.com/blog/why-tls-13-radically-different-tls-12#:~:text=As%20part%20of%20the%20SSL,weaknesses%20that%20had%20security%20vulnerabilities.)

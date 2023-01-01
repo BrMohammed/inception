@@ -7,4 +7,5 @@
 - [What is the difference between webpage, website, web server, and search engine?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
 - [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 - [NGINX Explained in 100 Seconds](https://www.youtube.com/watch?v=JKxlsvZXG7c&t=62s&ab_channel=Fireship)
+- [What is NginX and What are its use cases?](https://www.youtube.com/watch?v=WHv_t_yK-QM)
 

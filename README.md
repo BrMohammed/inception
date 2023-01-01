@@ -1,4 +1,10 @@
 # ressources
+
+This project consists in having set up a small infrastructure composed of different
+services under specific rules.
+
+<img width="697" alt="207206454-724fbb86-7285-4893-b70c-537f37d81d71" src="https://user-images.githubusercontent.com/65908703/210175934-889e9f16-b5c7-473f-bfbc-49a021ba8ba5.png">
+
 - [The Ultimate Docker Course](https://codewithmosh.com/p/the-ultimate-docker-course)
 - [Docker compose tutorial for beginners by example](https://www.youtube.com/watch?v=4EqysCR3mjo&ab_channel=takacsmark)
 - [Docker Networking Crash Course](https://www.youtube.com/watch?v=OU6xOM0SE4o&t=911s&ab_channel=HusseinNasser)

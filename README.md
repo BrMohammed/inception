@@ -6,6 +6,7 @@ services under specific rules.
 <img width="697" alt="207206454-724fbb86-7285-4893-b70c-537f37d81d71" src="https://user-images.githubusercontent.com/65908703/210175934-889e9f16-b5c7-473f-bfbc-49a021ba8ba5.png">
 
 - [The Ultimate Docker Course](https://codewithmosh.com/p/the-ultimate-docker-course)
+- [Docker in Practice: The Docker Daemon , By Ian Miell](https://freecontent.manning.com/wp-content/uploads/docker-in-practice-the-docker-daemon.pdf)
 - [Docker compose tutorial for beginners by example](https://www.youtube.com/watch?v=4EqysCR3mjo&ab_channel=takacsmark)
 - [Docker Networking Crash Course](https://www.youtube.com/watch?v=OU6xOM0SE4o&t=911s&ab_channel=HusseinNasser)
 - [Docker networking is CRAZY ](https://www.youtube.com/watch?v=bKFMS5C4CG0&t=1530s&ab_channel=NetworkChuck)

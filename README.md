@@ -15,4 +15,5 @@ services under specific rules.
 - [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 - [NGINX Explained in 100 Seconds](https://www.youtube.com/watch?v=JKxlsvZXG7c&t=62s&ab_channel=Fireship)
 - [What is NginX and What are its use cases?](https://www.youtube.com/watch?v=WHv_t_yK-QM)
+- [What is Nginx? Understanding the basics of Nginx in 2021 !](https://devopscurry.com/what-is-nginx-understanding-the-basics-of-nginx-in-2021/)
 

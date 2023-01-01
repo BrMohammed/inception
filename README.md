@@ -17,4 +17,5 @@ services under specific rules.
 - [What is NginX and What are its use cases?](https://www.youtube.com/watch?v=WHv_t_yK-QM)
 - [What is Nginx? Understanding the basics of Nginx in 2021 !](https://devopscurry.com/what-is-nginx-understanding-the-basics-of-nginx-in-2021/)
 - [What is a Proxy Server and How Does it Work?](https://www.varonis.com/blog/what-is-a-proxy-server)
+- [What Is a Reverse Proxy Server?](https://www.nginx.com/resources/glossary/reverse-proxy-server/)
 

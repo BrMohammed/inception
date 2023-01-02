@@ -24,3 +24,4 @@ services under specific rules.
 - [hat Is TLS? Understanding Transport Layer Security and How It Works](https://www.hostinger.com/tutorials/what-is-tls#What_Is_TLS)
 - [Compare TLS 1.3 and TLS 1.2](https://www.venafi.com/blog/why-tls-13-radically-different-tls-12#:~:text=As%20part%20of%20the%20SSL,weaknesses%20that%20had%20security%20vulnerabilities.)
 - [How To Configure Nginx to use 1.3 only](https://www.cyberciti.biz/faq/configure-nginx-to-use-only-tls-1-2-and-1-3/)
+- [Install WordPress on Debian 11 with Nginx and Let’s Encrypt](https://techviewleo.com/install-wordpress-on-debian-with-nginx-and-lets-encrypt/)

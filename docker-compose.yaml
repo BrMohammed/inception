@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  bd:
+    container_name: mariadb
+    build: ./mariadb
+    ports:
+      - 3306:3306
+
+  wordpressphp:
+    container_name: wordpress
+    build: ./wordpress
+    ports:
+      - 9000:9000
+    volumes:
+      - DB-WP:/var/www/html/wordpress/
+
+
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - 443:443
+
+volumes:
+  DB-WP:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${PWD}/DB-WP/
+  

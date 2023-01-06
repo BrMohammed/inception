@@ -27,3 +27,5 @@ services under specific rules.
 - [Install WordPress on Debian 11 with Nginx and Let’s Encrypt](https://techviewleo.com/install-wordpress-on-debian-with-nginx-and-lets-encrypt/)
 - [https](https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained)
 - [The NGINX Handbook ](https://www.freecodecamp.org/news/the-nginx-handbook)
+- [volume bind](https://stackoverflow.com/questions/40905761/how-do-i-mount-a-host-directory-as-a-volume-in-docker-compose)
+## php-fpm pool

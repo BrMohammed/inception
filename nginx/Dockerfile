@@ -4,13 +4,12 @@ RUN apt update
 
 RUN apt install -y nginx
 
+WORKDIR /var/www/html/wordpress/
+
 COPY default /etc/nginx/sites-enabled/
 
-COPY myblog.conf  /etc/nginx/conf.d/
+COPY wordpress.conf  /etc/nginx/conf.d/
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
 CMD ["nginx", "-g" ,"daemon off;"]
-
-
-

@@ -30,7 +30,7 @@ define( 'DB_USER', 'wpuser' );
 define( 'DB_PASSWORD', 'StrongPassword' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'mariadb' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );

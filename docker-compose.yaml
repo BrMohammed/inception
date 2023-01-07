@@ -7,6 +7,7 @@ services:
     ports:
       - 3306:3306
 
+
   wordpressphp:
     container_name: wordpress
     build: ./wordpress
@@ -21,6 +22,8 @@ services:
     build: ./nginx
     ports:
       - 443:443
+    volumes:
+      - DB-WP:/var/www/html/wordpress/
 
 volumes:
   DB-WP:
@@ -29,4 +32,3 @@ volumes:
       o: bind
       type: none
       device: ${PWD}/DB-WP/
-  

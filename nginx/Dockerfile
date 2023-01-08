@@ -6,9 +6,9 @@ RUN apt install -y nginx
 
 WORKDIR /var/www/html/wordpress/
 
-COPY wp.conf  /etc/nginx/conf.d/
+RUN chmod 755 /var/www/html/wordpress/
 
-COPY default  /etc/nginx/sites-enabled/
+COPY default  /etc/nginx/sites-available/
 
 COPY nginx.conf  /etc/nginx/
 

@@ -2,11 +2,19 @@
 server {
         listen 80 default_server;
         listen [::]:80 default_server;
-        server_name br;
+        server_name _;
+
+        index index.html index.php;
+
         root /var/www/html/wordpress;
+        
+        location / {
+                 try_files $uri $uri/ =404;
+        }
+
         location ~ \.php$ {
-                        include                         /etc/nginx/snippets/fastcgi-php.conf;
-                        fastcgi_pass                    127.0.0.1:9000;
-                }
+                include                         snippets/fastcgi-php.conf;
+                fastcgi_pass                    wordpress:9000;
+        }
 
 }

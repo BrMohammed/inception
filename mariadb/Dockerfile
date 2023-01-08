@@ -11,6 +11,6 @@ RUN  /script_maria.sh
 
 EXPOSE 3306
 
-#RUN service mysql start
+
 
 CMD ["mysqld"]

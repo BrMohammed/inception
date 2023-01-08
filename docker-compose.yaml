@@ -6,30 +6,32 @@ services:
     build: ./mariadb
     ports:
       - 3306:3306
-    # networks:
-    #   - host
+    volumes:
+      - DB:/var/lib/mysql
+    networks:
+      - host
 
   wordpress:
     container_name: wordpress
+    depends_on:
+      - mariadb
     build: ./wordpress
     ports:
       - 9000:9000
-    depends_on:
-      - mariadb
     volumes:
       - DB-WP:/var/www/html/wordpress
-    # networks:
-    #   - host
+    networks:
+      - host
 
   nginx:
     container_name: nginx
     build: ./nginx
     ports:
-      - 80:80
+      - 443:443
     volumes:
       - DB-WP:/var/www/html/wordpress
-    # networks:
-    #   - host
+    networks:
+      - host
 
 volumes:
   DB-WP:
@@ -38,7 +40,13 @@ volumes:
       o: bind
       type: none
       device: ${PWD}/DB-WP/
+  DB:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${PWD}/DB/
 
-# networks:
-#   host:
-#     driver: bridge
+networks:
+  host:
+    driver: bridge

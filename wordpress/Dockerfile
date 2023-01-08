@@ -19,6 +19,8 @@ COPY wp-config.php .
 
 RUN mkdir -p /run/php/
 
-RUN chown -R www-data:www-data .
+COPY www.conf /etc/php/7.3/fpm/pool.d/
+
+RUN chown -R www-data:www-data /var/www/html/wordpress
 
 CMD ["php-fpm7.3" ,"-F", "-R"]

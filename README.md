@@ -28,4 +28,5 @@ services under specific rules.
 - [https](https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained)
 - [The NGINX Handbook ](https://www.freecodecamp.org/news/the-nginx-handbook)
 - [volume bind](https://stackoverflow.com/questions/40905761/how-do-i-mount-a-host-directory-as-a-volume-in-docker-compose)
-## php-fpm pool
+- [Certificate] (https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-centos-7)
+mysql -u root  mariadb < filename.sql

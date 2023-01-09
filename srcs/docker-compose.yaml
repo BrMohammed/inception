@@ -2,30 +2,40 @@ version: '3.8'
 
 services:
   mariadb:
+    image: mariadb
     container_name: mariadb
-    build: ./mariadb
-    ports:
-      - 3306:3306
+    build:
+      context: ${PWD}/reuirements/mariadb
+      args:
+        - DB_NAME=mariadb
+        - DB_USER=br
+        - DB_PASS=0000
+        - DB_ROOT_PASS=0000
     volumes:
       - DB:/var/lib/mysql
     networks:
       - host
 
   wordpress:
-    container_name: wordpress
-    depends_on:
+    depends_on: 
       - mariadb
-    build: ./wordpress
-    ports:
-      - 9000:9000
+    image: wordpress
+    container_name: wordpress
+    build:
+      context: ${PWD}/reuirements/wordpress
+      args:
+        - DB_NAME=mariadb
+        - DB_USER=br
+        - DB_PASS=0000
     volumes:
       - DB-WP:/var/www/html/wordpress
     networks:
       - host
 
   nginx:
+    image: nginx
     container_name: nginx
-    build: ./nginx
+    build: ${PWD}/reuirements/nginx
     ports:
       - 443:443
     volumes:
@@ -39,13 +49,13 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: ${PWD}/DB-WP/
+      device: ${PWD}/data/db-wp
   DB:
     driver: local
     driver_opts:
       o: bind
       type: none
-      device: ${PWD}/DB/
+      device: ${PWD}/data/db
 
 networks:
   host:

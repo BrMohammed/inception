@@ -4,13 +4,17 @@ RUN apt update
 
 #mariadb
 RUN apt install -y mariadb-server 
-RUN service mysql start
 
 COPY script_maria.sh /
+
+COPY filename.sql /
+
+COPY 50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 ARG DB_NAME DB_USER DB_PASS DB_ROOT_PASS
 
 RUN chmod +x /script_maria.sh
 RUN  ./script_maria.sh
 
+#CMD sleep 100000
 CMD ["mysqld"]

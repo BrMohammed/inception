@@ -10,7 +10,9 @@ RUN chmod 755 /var/www/html/wordpress/
 
 COPY default  /etc/nginx/sites-available/
 
-COPY nginx.conf  /etc/nginx/
+RUN mkdir -p /etc/nginx/certificates
+
+COPY ./certificate/* /etc/nginx/certificates
 
 CMD ["nginx", "-g" ,"daemon off;"]
 

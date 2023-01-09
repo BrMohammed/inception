@@ -12,13 +12,11 @@ services:
         - DB_PASS=0000
         - DB_ROOT_PASS=0000
     volumes:
-      - DB:/var/lib/mysql
+      - DB:/var/lib/mysql/
     networks:
       - host
 
   wordpress:
-    depends_on: 
-      - mariadb
     image: wordpress
     container_name: wordpress
     build:
@@ -27,6 +25,8 @@ services:
         - DB_NAME=mariadb
         - DB_USER=br
         - DB_PASS=0000
+    depends_on: 
+      - mariadb
     volumes:
       - DB-WP:/var/www/html/wordpress
     networks:
@@ -38,6 +38,8 @@ services:
     build: ${PWD}/reuirements/nginx
     ports:
       - 443:443
+    depends_on: 
+      - wordpress
     volumes:
       - DB-WP:/var/www/html/wordpress
     networks:

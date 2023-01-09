@@ -14,18 +14,19 @@ RUN rmdir ./wordpress/
 RUN rm -f latest.tar.gz
 
 RUN chmod 777 /var/www/html/wordpress/
-
-RUN chown -R www-data:1000 /var/www/html/wordpress
-
-COPY wp-config.php .
+RUN chmod 777 /var/www/html/
 
 RUN rm -fr wp-config-sample.php
 
-RUN mkdir -p /run/php/
+COPY wp-config.php .
 
 COPY script.sh .
 
+RUN mkdir -p /run/php/
+
 RUN chmod +x script.sh
+
+RUN chown -R www-data:1000 /var/www/html/wordpress
 
 ENTRYPOINT [ "./script.sh" ]
 

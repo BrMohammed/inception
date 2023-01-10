@@ -5,12 +5,12 @@ services:
     image: mariadb
     container_name: mariadb
     build:
-      context: ${PWD}/reuirements/mariadb
+      context: ${PWD}/srcs/requirements/mariadb
       args:
-        - DB_NAME=mariadb
-        - DB_USER=von
-        - DB_PASS=0000
-        - DB_ROOT_PASS=0000
+        - DB_NAME=${DB_NAME}
+        - DB_USER=${DB_USER}
+        - DB_PASS=${DB_PASS}
+        - DB_ROOT_PASS=${DB_ROOT_PASS}
     volumes:
       - DB:/var/lib/mysql/
     networks:
@@ -20,11 +20,11 @@ services:
     image: wordpress
     container_name: wordpress
     build:
-      context: ${PWD}/reuirements/wordpress
+      context: ${PWD}/srcs/requirements/wordpress
       args:
-        - DB_NAME=mariadb
-        - DB_USER=von
-        - DB_PASS=0000
+        - DB_NAME=${DB_NAME}
+        - DB_USER=${DB_USER}
+        - DB_PASS=${DB_PASS}
     depends_on: 
       - mariadb
     volumes:
@@ -35,7 +35,7 @@ services:
   nginx:
     image: nginx
     container_name: nginx
-    build: ${PWD}/reuirements/nginx
+    build: ${PWD}/srcs/requirements/nginx
     ports:
       - 443:443
     depends_on: 
@@ -51,13 +51,13 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: ${PWD}/data/db-wp
+      device: ${PWD}/srcs/data/db-wp
   DB:
     driver: local
     driver_opts:
       o: bind
       type: none
-      device: ${PWD}/data/db
+      device: ${PWD}/srcs/data/db
 
 networks:
   host:

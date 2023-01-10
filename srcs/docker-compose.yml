@@ -34,6 +34,14 @@ services:
     networks:
       - host
 
+  redis:
+    image: redis
+    container_name: redis
+    build: ${PWD}/srcs/requirements/bonus/redis
+    restart : always
+    networks:
+      - host
+
   nginx:
     image: nginx
     container_name: nginx

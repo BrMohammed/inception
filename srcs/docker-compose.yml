@@ -11,6 +11,7 @@ services:
         - DB_USER=${DB_USER}
         - DB_PASS=${DB_PASS}
         - DB_ROOT_PASS=${DB_ROOT_PASS}
+    restart : always
     volumes:
       - DB:/var/lib/mysql/
     networks:
@@ -25,6 +26,7 @@ services:
         - DB_NAME=${DB_NAME}
         - DB_USER=${DB_USER}
         - DB_PASS=${DB_PASS}
+    restart : always
     depends_on: 
       - mariadb
     volumes:
@@ -36,6 +38,7 @@ services:
     image: nginx
     container_name: nginx
     build: ${PWD}/srcs/requirements/nginx
+    restart : always
     ports:
       - 443:443
     depends_on: 

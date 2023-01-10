@@ -29,4 +29,4 @@ services under specific rules.
 - [The NGINX Handbook ](https://www.freecodecamp.org/news/the-nginx-handbook)
 - [volume bind](https://stackoverflow.com/questions/40905761/how-do-i-mount-a-host-directory-as-a-volume-in-docker-compose)
 - [Certificate] (https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-centos-7)
-mysql -u root  mariadb < filename.sql
+- [waht is redis](https://www.youtube.com/watch?v=8A_iNFRP0F4&ab_channel=CBTNuggets)

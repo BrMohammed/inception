@@ -1,6 +1,6 @@
 
 
-FILE = srcs/docker-compose.yml
+FILE = srcs/docker-compose.yaml
 
 all : build up
 

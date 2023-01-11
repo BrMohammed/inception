@@ -11,13 +11,11 @@ server {
         index index.html index.php;
 
         root /var/www/html/wordpress;
-        
-
-         location /mysite {  
-                root /var/www/html/wordpress/mysite;
+       
+        location /static-site {
+                proxy_pass http://static-site:3000/;
         }
         
-
         location /adminer {  
                 limit_rate_after        512;
                 proxy_pass              http://adminer:8080;

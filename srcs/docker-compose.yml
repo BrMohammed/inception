@@ -41,6 +41,14 @@ services:
     restart : always
     networks:
       - host
+  
+  static-site:
+    image: static-site
+    container_name: static-site
+    build: ${PWD}/srcs/requirements/bonus/static-site
+    restart : always
+    networks:
+      - host
 
   admidner:
     image: adminer

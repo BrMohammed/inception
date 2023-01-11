@@ -9,10 +9,11 @@ RUN apt install wget vim -y
 RUN wget https://wordpress.org/latest.tar.gz
 RUN tar xvf latest.tar.gz
 
+#redis
 RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 RUN chmod +x wp-cli.phar
 RUN mv wp-cli.phar /usr/local/bin/wp
-
+#
 RUN mv wordpress/* ./
 RUN rmdir ./wordpress/
 RUN rm -f latest.tar.gz

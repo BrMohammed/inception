@@ -12,13 +12,23 @@ server {
 
         root /var/www/html/wordpress;
         
+
+         location /mysite {  
+                root /var/www/html/wordpress/mysite;
+        }
+        
+
+        location /adminer {  
+                limit_rate_after        512;
+                proxy_pass              http://adminer:8080;
+        }
+              
+
         location / {
-                 try_files $uri $uri/ =404;
+                try_files $uri $uri/ =404;
+                         location ~ \.php$ {
+                                include                         snippets/fastcgi-php.conf;
+                                fastcgi_pass                    wordpress:9000;
+                        }
         }
-
-        location ~ \.php$ {
-                include                         snippets/fastcgi-php.conf;
-                fastcgi_pass                    wordpress:9000;
-        }
-
 }

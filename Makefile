@@ -6,7 +6,6 @@ up :
 	@docker-compose -f ${FILE} up -d
 
 build :
-	@rm -rf srcs/data
 	@mkdir -p srcs/data srcs/data/db srcs/data/db-wp
 	@docker-compose -f ${FILE} build
 

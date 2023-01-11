@@ -42,6 +42,14 @@ services:
     networks:
       - host
 
+  admidner:
+    image: adminer
+    container_name: adminer
+    build: ${PWD}/srcs/requirements/bonus/adminer
+    restart : always
+    networks:
+      - host
+
   nginx:
     image: nginx
     container_name: nginx

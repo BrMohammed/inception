@@ -6,7 +6,7 @@ up :
 	@docker-compose -f ${FILE} up -d
 
 build :
-	@mkdir -p srcs/data srcs/data/db srcs/data/db-wp
+	@mkdir -p srcs/data srcs/data/db srcs/data/db-wp srcs/data/db-p
 	@docker-compose -f ${FILE} build
 
 down :
@@ -18,7 +18,6 @@ clean :
 fclean: clean
 	@docker image prune -af
   	
-
 re: fclean build up
 
 .PHONY: all up build down clean fclean

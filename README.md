@@ -33,3 +33,4 @@ services under specific rules.
 - [ftv server](https://www.youtube.com/watch?v=TyqwwAzwLuM&ab_channel=ElitheComputerGuy)
 - [wordpress with redis](https://www.digitalocean.com/community/tutorials/how-to-configure-redis-caching-to-speed-up-wordpress-on-ubuntu-14-04)
 - [wprdpress cli](https://blog.sucuri.net/2022/11/wp-cli-how-to-install-wordpress-via-ssh.html#create-directory)
+- [portainer first use ](https://install.portainer.io/be-standalone-linux)

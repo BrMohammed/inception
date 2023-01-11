@@ -34,6 +34,22 @@ services:
     networks:
       - host
 
+  nginx:
+    image: nginx
+    container_name: nginx
+    build: ${PWD}/srcs/requirements/nginx
+    restart : always
+    ports:
+      - 443:443
+    depends_on: 
+      - wordpress
+    volumes:
+      - DB-WP:/var/www/html/wordpress
+    networks:
+      - host
+
+      ############# bonus #############
+
   redis:
     image: redis
     container_name: redis
@@ -58,19 +74,18 @@ services:
     networks:
       - host
 
-  nginx:
-    image: nginx
-    container_name: nginx
-    build: ${PWD}/srcs/requirements/nginx
+  portainer:
+    image: portainer
+    container_name: portainer
+    build: ${PWD}/srcs/requirements/bonus/portainer
     restart : always
-    ports:
-      - 443:443
-    depends_on: 
-      - wordpress
-    volumes:
-      - DB-WP:/var/www/html/wordpress
     networks:
       - host
+    volumes:
+      - DB-P:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 9443:9443
 
 volumes:
   DB-WP:
@@ -85,6 +100,12 @@ volumes:
       o: bind
       type: none
       device: ${PWD}/srcs/data/db
+  DB-P:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${PWD}/srcs/data/db-p
 
 networks:
   host:

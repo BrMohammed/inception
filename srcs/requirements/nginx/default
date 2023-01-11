@@ -20,7 +20,6 @@ server {
                 limit_rate_after        512;
                 proxy_pass              http://adminer:8080;
         }
-              
 
         location / {
                 try_files $uri $uri/ =404;

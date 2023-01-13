@@ -23,9 +23,9 @@ RUN chmod 777 /var/www/html/
 
 RUN rm -fr wp-config-sample.php
 
-COPY wp-config.php .
+COPY ./conf/wp-config.php .
 
-COPY script.sh .
+COPY ./tool/script.sh .
 
 RUN mkdir -p /run/php/
 

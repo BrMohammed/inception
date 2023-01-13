@@ -20,12 +20,7 @@ services:
   wordpress:
     image: wordpress
     container_name: wordpress
-    build:
-      context: ${PWD}/srcs/requirements/wordpress
-      args:
-        - DB_NAME=${DB_NAME}
-        - DB_USER=${DB_USER}
-        - DB_PASS=${DB_PASS}
+    build: ${PWD}/srcs/requirements/wordpress
     restart : always
     depends_on: 
       - mariadb

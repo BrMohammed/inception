@@ -16,5 +16,3 @@ COPY ./certificate/* /etc/nginx/certificates
 
 
 CMD ["nginx", "-g" ,"daemon off;"]
-
-#tail -f /var/log/nginx/error.log tail -f /var/log/nginx/error.log 
